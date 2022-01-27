@@ -13,3 +13,21 @@ function forEach(arr, func) {
 }
 
 forEach(arr, f);
+//
+// const arr = [1,2,3];
+// let i, item;
+// let f = function() {
+//     for ( i = 0; i < arr.length; i++) {
+//         item = arr[i];
+//         console.log(i + ': ' + item + ' ( Array: ' + arr + ')');
+//     }
+// }
+//
+//
+// function deClar() {
+//     if (Array.isArray(arr) && typeof f === 'function') {
+//         f(item, i, arr);
+//     }
+// }
+//
+// deClar();
