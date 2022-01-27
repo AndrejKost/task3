@@ -7,7 +7,7 @@ let f = function(el, pos, arr) {
     }
 }
 
-function filter(arr, func) {
+function every(arr, func) {
     if (Array.isArray(arr) && typeof func === 'function') {
         let one;
         for (let i = 0; i < arr.length; i++) {
@@ -24,4 +24,4 @@ function filter(arr, func) {
     }
 }
 
-const res = filter( arr, f);
+const res = every( arr, f);
