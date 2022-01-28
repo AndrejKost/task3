@@ -1,23 +1,18 @@
 const arr = [2,3,1];
 const acc = 0;
-let f = function(sum, el, pos, arr) {
-    return sum + el;
+let f = function(summ, el, pos, arr) {
+    return el;
 }
 
-function reduce(arr, func, acc) {
-    if (Array.isArray(arr) && typeof func === 'function' && (typeof acc == 'number' || typeof acc == 'string')) {
-
-        for (let i = 0; i < arr.length; i++) {
-            const res = func(acc, arr[i], i, arr);
-            if (res) {
-                console.log(res);
-            }
-            return res;
+function reduce(inputArr, inputFunc, inputAcc = 0) {
+    if (Array.isArray(inputArr) && typeof inputFunc === 'function' && (typeof inputAcc == 'number' || typeof inputAcc == 'string')) {
+        let sum = inputAcc;
+        for (let i = 0; i < inputArr.length; i++) {
+            sum += inputFunc(inputAcc, inputArr[i], i, inputArr);
         }
-        //return console.log( `array.reduce is ${res}`);
+        return sum;
     }
-
 }
 
 const res = reduce( arr, f, acc);
-console.log(`Sum array is ${res}`);
+console.log( `array.reduce is ${res}`);
