@@ -2,7 +2,7 @@ const arr = [2,3,1];
 const acc = 0;
 let f = function(summ, el, pos, arr) {
     return el;
-}
+};
 
 function reduceRight(inputArr, inputFunc, inputAcc = 0) {
     if (Array.isArray(inputArr) && typeof inputFunc === 'function' && (typeof inputAcc == 'number' || typeof inputAcc == 'string')) {
