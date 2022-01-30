@@ -6,10 +6,9 @@ function reverce(inputArr) {
         for (var i = 0;  i < endI; i++) {
             var endJ = endI - i;
             for (var j = 0;  j < endJ; j++) {
-                let tmp = inputArr[j];
-                inputArr[j] = inputArr[j + 1];
+                let tmp = inputArr[j];//
+                inputArr[j] = inputArr[j + 1];//
                 inputArr[j + 1] = tmp;
-                console.log(' ==> ',tmp);//return inputArr.push (inputArr[i]);
             }
         }
         return inputArr;
@@ -18,5 +17,4 @@ function reverce(inputArr) {
     }
 }
 const outArr = reverce(arr);
-console.log(' ==> ',arr);
 console.log(`Array reverce is: ${outArr}`);
